@@ -30,7 +30,7 @@ def init_db():
 
 @app.before_request
 def before_request():
-    g.db = connect_db()
+    g.db = connect_db(var)
 
 @app.teardown_request
 def teardown_request(exception):
