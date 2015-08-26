@@ -11,7 +11,8 @@ SECRET_KEY = 'development key'
 USERNAME = 'admin'
 PASSWORD = 'default'
 
-#create our little application 
+# create our little application 
+
 app = Flask(__name__)
 app.config.from_envvar('BLOGGIFY_SETTINGS', silent=True)
 
@@ -68,8 +69,6 @@ def login():
             flash('You were logged in')
             return redirect(url_for('show_entries'))
     return render_template('login.html', error=error)
-
-
 
 
 if __name__ == '__main__':
